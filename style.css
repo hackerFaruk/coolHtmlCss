@@ -1,10 +1,20 @@
 .card {
-    width: 50%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
     
     height: 600px;
     background-color: azure ;
     border-radius: 5%;
+    margin-bottom: 30px;
 }
+
+.namer{ 
+    margin-bottom: 15% ;
+font-size: large;}
 
 .banner {
     text-align: center;
@@ -55,22 +65,72 @@ body {
     background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
 }
 
-
-
-
-.explodeBurger{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 400px;
-
-}
-
-.topBun{
-    width: 100px;
-    height: 20px;
-    color: rgb(250, 207, 51);
+#darkmodetoggle{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;   
 }
 
 
-.explodeBurger:hover .topBun{}
+
+
+
+.darkmodetogglelabel{
+    margin : 10px;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    display :block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* :after is psuedo child for devcorative no need to show in html */
+.darkmodetogglelabel:after{
+    content: "";
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top : 10px ;
+    left : 10px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2) ;
+    transition: all 0.3s;
+}
+
+ #darkmodetoggle:checked + .darkmodetogglelabel{
+    background: #242424;
+ }
+
+
+#darkmodetoggle:checked + .darkmodetogglelabel:after{
+    background-color: #242424;
+    left: 490px;
+    transform: translate(-100%);
+    background: linear-gradient(180deg, #777 ,#3a3a3a);
+
+ }
+
+ /* when label is clicked it is active and thus after changes shape yet it reverts back*/
+ .darkmodetogglelabel:active:after{
+    width:260px;
+    background: linear-gradient(90deg, #777 , #ffcc89);
+ }
+
+
+
+
+  /* causes a bounce and after it needs time to settle in */
+
+ .radioMagic{transition: all 3s;}
+
+ .radioMagic:checked{ width: 1rem;}
+
+.radioMagic:active{
+    margin-right: 10px;
+    width: 3rem;
+height : 3rem;}
