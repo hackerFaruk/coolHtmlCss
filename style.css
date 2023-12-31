@@ -134,3 +134,19 @@ body {
     margin-right: 10px;
     width: 3rem;
 height : 3rem;}
+
+
+
+.flex-container{ 
+    margin: 10px;
+    border: solid salmon 5px;
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+    display: grid;
+     /* repeats colum size 60px 3 times  */
+      /*  / separtes column and row definitrion */
+      /*  auto *flow creates required amount of rows with given 80px size  */
+    grid: repeat(3, 1fr) / auto-flow 1fr;
+    
+}
