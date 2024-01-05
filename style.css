@@ -225,7 +225,7 @@ body {
    
 }
 .positionMid:hover  ~ .frontParal{
-    transform: translateY(150px);
+    transform: translate( 20px , 150px ) ;
   
 }
 .positionBot:hover  ~ .frontParal{
@@ -241,7 +241,8 @@ body {
    
 }
 .positionMid:hover  ~ .midParal{
-    transform: translateY(150px);
+    transform: translate( 40px , 150px ) ;
+
   
 }
 .positionBot:hover  ~ .midParal{
@@ -259,7 +260,8 @@ body {
    
 }
 .positionMid:hover  ~ .backParal{
-    transform: translateY(150px);
+    transform: translate(60px , 150px  ) ;
+   
   
 }
 .positionBot:hover  ~ .backParal{
