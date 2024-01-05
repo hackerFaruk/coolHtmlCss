@@ -148,5 +148,47 @@ height : 3rem;}
       /*  / separtes column and row definitrion */
       /*  auto *flow creates required amount of rows with given 80px size  */
     grid: repeat(3, 1fr) / auto-flow 1fr;
+  
+
+    overflow: hidden;
+   
+
+}
+
+.flex-item{
+
+   
+  
+    border: 1px solid green;
+    transition: all 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s ease;
+ 
+}
+
+.flex-item:hover{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+
+.flex-item:hover::after{
+     /*  make it new line \n doesnt work  */
     
+    content: "hello   you are hovering me ";
+    display: block;
+}
+
+
+
+.parallaxFrame{
+
+   
+    border: solid rgb(200, 44, 26) 5px;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+
 }
