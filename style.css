@@ -208,12 +208,22 @@ body {
     background-color: aqua;
 }
 
+
+
+
 /*  css + adjacent sibling combinator */
-.position:hover+.frontParal {
-    width: 100px;
-    height: 100px;
+/*  css ~ adjacent sibling combinator but looser */
+
+.positionMid:hover  ~ .frontParal{
+   
     background-color: aqua;
 }
+.positionTop:hover  ~ .frontParal{
+   
+    background-color: red;
+}
+
+
 
 .frontParal {
     width: 450px;
@@ -258,3 +268,6 @@ body {
     height: 150px;
     border: solid green 5px;
 }
+
+
+
