@@ -193,3 +193,14 @@ height : 3rem;}
     height: 400px;
 
 }
+
+.position{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+/*  css + adjacent sibling combinator */
+.position:hover + .foreground{  width: 100px;
+    height: 100px;
+    background-color: aqua;}
