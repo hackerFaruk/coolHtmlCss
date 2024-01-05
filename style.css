@@ -1,21 +1,22 @@
 .card {
-   
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 600px;
-    
+
     height: 600px;
-    background-color: azure ;
+    background-color: azure;
     border-radius: 5%;
     margin-bottom: 30px;
-    
+
 }
 
-.namer{ 
-    margin-bottom: 15% ;
-font-size: large;}
+.namer {
+    margin-bottom: 15%;
+    font-size: large;
+}
 
 .banner {
     text-align: center;
@@ -66,22 +67,22 @@ body {
     background: linear-gradient(rgba(153, 1, 172, 1), rgba(0, 212, 255, 1));
 }
 
-#darkmodetoggle{
+#darkmodetoggle {
     width: 0px;
     height: 0px;
-    visibility: hidden;   
+    visibility: hidden;
 }
 
 
 
 
 
-.darkmodetogglelabel{
-    margin : 10px;
+.darkmodetogglelabel {
+    margin: 10px;
     width: 500px;
     height: 200px;
     position: relative;
-    display :block;
+    display: block;
     background: #ebebeb;
     border-radius: 200px;
     box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
@@ -90,117 +91,170 @@ body {
 }
 
 /* :after is psuedo child for devcorative no need to show in html */
-.darkmodetogglelabel:after{
+.darkmodetogglelabel:after {
     content: "";
     width: 180px;
     height: 180px;
     position: absolute;
-    top : 10px ;
-    left : 10px;
+    top: 10px;
+    left: 10px;
     background: linear-gradient(180deg, #ffcc89, #d8860b);
     border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.2) ;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
 }
 
- #darkmodetoggle:checked + .darkmodetogglelabel{
+#darkmodetoggle:checked+.darkmodetogglelabel {
     background: #242424;
- }
+}
 
 
-#darkmodetoggle:checked + .darkmodetogglelabel:after{
+#darkmodetoggle:checked+.darkmodetogglelabel:after {
     background-color: #242424;
     left: 490px;
     transform: translate(-100%);
-    background: linear-gradient(180deg, #777 ,#3a3a3a);
+    background: linear-gradient(180deg, #777, #3a3a3a);
 
- }
+}
 
- /* when label is clicked it is active and thus after changes shape yet it reverts back*/
- .darkmodetogglelabel:active:after{
-    width:260px;
-    background: linear-gradient(90deg, #777 , #ffcc89);
- }
-
-
+/* when label is clicked it is active and thus after changes shape yet it reverts back*/
+.darkmodetogglelabel:active:after {
+    width: 260px;
+    background: linear-gradient(90deg, #777, #ffcc89);
+}
 
 
-  /* causes a bounce and after it needs time to settle in */
 
- .radioMagic{transition: all 3s;}
 
- .radioMagic:checked{ width: 1rem;}
+/* causes a bounce and after it needs time to settle in */
 
-.radioMagic:active{
+.radioMagic {
+    transition: all 3s;
+}
+
+.radioMagic:checked {
+    width: 1rem;
+}
+
+.radioMagic:active {
     margin-right: 10px;
     width: 3rem;
-height : 3rem;}
+    height: 3rem;
+}
 
 
 
-.flex-container{ 
+.flex-container {
     margin: 10px;
     border: solid salmon 5px;
     border-radius: 15px;
     width: 500px;
     height: 500px;
     display: grid;
-     /* repeats colum size 60px 3 times  */
-      /*  / separtes column and row definitrion */
-      /*  auto *flow creates required amount of rows with given 80px size  */
+    /* repeats colum size 60px 3 times  */
+    /*  / separtes column and row definitrion */
+    /*  auto *flow creates required amount of rows with given 80px size  */
     grid: repeat(3, 1fr) / auto-flow 1fr;
-  
+
 
     overflow: hidden;
-   
+
 
 }
 
-.flex-item{
+.flex-item {
 
-   
-  
+
+
     border: 1px solid green;
     transition: all 2s;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 2s ease;
- 
+
 }
 
-.flex-item:hover{
+.flex-item:hover {
     width: 200px;
     height: 200px;
     background-color: green;
 }
 
-.flex-item:hover::after{
-     /*  make it new line \n doesnt work  */
-    
+.flex-item:hover::after {
+    /*  make it new line \n doesnt work  */
+
     content: "hello   you are hovering me ";
     display: block;
 }
 
 
 
-.parallaxFrame{
+.parallaxFrame {
 
-   
+
     border: solid rgb(200, 44, 26) 5px;
     border-radius: 15px;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
 
 }
 
-.position{
+.position {
     width: 100px;
     height: 100px;
     background-color: aqua;
 }
 
 /*  css + adjacent sibling combinator */
-.position:hover + .foreground{  width: 100px;
+.position:hover+.frontParal {
+    width: 100px;
     height: 100px;
-    background-color: aqua;}
+    background-color: aqua;
+}
+
+.frontParal {
+    width: 450px;
+    height: 150px;
+    position: absolute;
+    border: solid red 5px;
+}
+
+.midParal {
+    width: 450px;
+    height: 150px;
+    position: absolute;
+    border: solid red 5px;
+}
+
+.backParal {
+    width: 450px;
+    height: 150px;
+    position: absolute;
+    border: solid red 5px;
+}
+
+
+.positionTop{
+    z-index: 2;
+    width: 450px;
+    height: 150px;
+    border: solid green 5px;
+    
+}
+
+.positionMid{
+    z-index: 2;
+    width: 450px;
+    height: 150px;
+    border: solid green 5px;
+}
+
+.positionBot{
+    z-index: 2;
+    width: 450px;
+    height: 150px;
+    border: solid green 5px;
+}
